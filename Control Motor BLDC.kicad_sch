@@ -1,0 +1,222 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "dcdea0bb-21d8-4b74-9d07-c2aa983143bc")
+	(paper "A4")
+	(lib_symbols)
+	(text "TIVA-TM4C123GXL"
+		(exclude_from_sim no)
+		(at 182.118 46.482 0)
+		(effects
+			(font
+				(size 3.81 3.81)
+			)
+		)
+		(uuid "145f2528-5441-477c-870d-2473df23921d")
+	)
+	(text "MOTOR, DRIVERS \nY CONTROL"
+		(exclude_from_sim no)
+		(at 184.15 102.362 0)
+		(effects
+			(font
+				(size 3.81 3.81)
+			)
+		)
+		(uuid "84f8a2e5-fde9-49ae-8f4d-aed25fcf11aa")
+	)
+	(text "INPUTS Y OUTPUTS"
+		(exclude_from_sim no)
+		(at 99.822 48.006 0)
+		(effects
+			(font
+				(size 3.81 3.81)
+			)
+		)
+		(uuid "a58abcfc-e9cc-4a93-b3ba-956b64fa331f")
+	)
+	(text "TESTPOINTS"
+		(exclude_from_sim no)
+		(at 102.108 104.902 0)
+		(effects
+			(font
+				(size 3.81 3.81)
+			)
+		)
+		(uuid "ca6105fb-4034-4d36-92f5-423a170f626e")
+	)
+	(sheet
+		(at 157.48 113.03)
+		(size 54.61 31.75)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "524fdbda-ee59-4f87-985f-bccdce86c6f2")
+		(property "Sheetname" "Motor"
+			(at 157.48 112.3184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Motor.kicad_sch"
+			(at 157.48 145.3646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Control Motor BLDC"
+				(path "/dcdea0bb-21d8-4b74-9d07-c2aa983143bc"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 73.66 57.15)
+		(size 54.61 31.75)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "5d150ff1-9c50-4d7b-bfb0-f509a9fe8160")
+		(property "Sheetname" "Inputs y Outputs"
+			(at 73.66 56.4384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "IO.kicad_sch"
+			(at 73.66 89.4846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Control Motor BLDC"
+				(path "/dcdea0bb-21d8-4b74-9d07-c2aa983143bc"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 156.21 57.15)
+		(size 54.61 31.75)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "5fc1b2c4-268f-4972-bbdc-642a56aa3421")
+		(property "Sheetname" "TM4C123GXL"
+			(at 156.21 56.4384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "TM4C123GXL.kicad_sch"
+			(at 156.21 89.4846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Control Motor BLDC"
+				(path "/dcdea0bb-21d8-4b74-9d07-c2aa983143bc"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 73.66 113.03)
+		(size 54.61 31.75)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "ed5826de-c2e9-4037-9eb4-ace280a0db79")
+		(property "Sheetname" "Testpoints"
+			(at 73.66 112.3184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Testpoints.kicad_sch"
+			(at 73.66 145.3646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Control Motor BLDC"
+				(path "/dcdea0bb-21d8-4b74-9d07-c2aa983143bc"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

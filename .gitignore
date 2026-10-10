@@ -1,0 +1,14 @@
+# KiCad: backups, caches y archivos locales de usuario
+*-backups/
+*.bak
+*.lck
+~*
+fp-info-cache
+*.kicad_prl
+_autosave-*
+# Salidas de fabricación (se publican como release si hace falta)
+gerbers/
+*.gbr
+*.drl
+# macOS
+.DS_Store
