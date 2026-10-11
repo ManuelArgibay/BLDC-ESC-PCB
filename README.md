@@ -58,4 +58,4 @@ Las librerías propias se referencian con `${KIPRJMOD}` en `fp-lib-table` y `sym
 
 ## Autor
 
-Manuel Argibay Molina — [@ManuelArgibay](https://github.com/ManuelArgibay)
+Manuel Argibay Molina y Max Pérez Piqué — [@ManuelArgibay](https://github.com/ManuelArgibay)
