@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 1.2,
-          "height": 1.4,
-          "width": 1.9
+          "drill": 0.0,
+          "height": 2.5,
+          "width": 4.0
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -59,26 +59,6 @@
         }
       ],
       "drc_exclusions": [
-        [
-          "duplicate_footprints|82550000|135255000|3cacadfa-dbf0-4aa2-8363-19ef33ac0fad|2242052c-d46f-4a77-9f14-5523cd8d98cc",
-          ""
-        ],
-        [
-          "extra_footprint|114000000|51600000|9ae2e5ee-548f-4b8a-8670-d115f4fc5cfc|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "extra_footprint|145415000|135255000|2242052c-d46f-4a77-9f14-5523cd8d98cc|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "extra_footprint|82000000|63900000|15725335-882d-4096-9bed-536b8c80f5c8|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
-          "extra_footprint|82550000|135255000|3cacadfa-dbf0-4aa2-8363-19ef33ac0fad|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
         [
           "lib_footprint_mismatch|116103400|135585200|5b2317b7-5413-4aaa-bb2e-50b36ebbc544|00000000-0000-0000-0000-000000000000",
           ""
@@ -101,6 +81,10 @@
         ],
         [
           "lib_footprint_mismatch|94593800|124143200|bfdadb75-8b5f-494d-a4f3-3099b77fb74e|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "silk_over_copper|80363800|95994200|a5140040-1da5-41b1-b573-2ec16d88b05c|00000000-0000-0000-0000-000000000000",
           ""
         ]
       ],
@@ -1016,6 +1000,10 @@
       {
         "netclass": "Logic",
         "pattern": "PF1"
+      },
+      {
+        "netclass": "Logic",
+        "pattern": "PA3"
       }
     ]
   },
@@ -1194,6 +1182,14 @@
       "version": 1
     },
     "net_format_name": "",
+    "ngspice": {
+      "fix_include_paths": true,
+      "meta": {
+        "version": 0
+      },
+      "model_mode": 4,
+      "workbook_filename": ""
+    },
     "page_layout_descr_file": "",
     "plot_directory": "",
     "space_save_all_events": true,

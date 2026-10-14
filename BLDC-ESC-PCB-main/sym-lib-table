@@ -1,5 +1,0 @@
-(sym_lib_table
-  (version 7)
-  (lib (name "AP1509")(type "KiCad")(uri "${KIPRJMOD}/Footprints/Buck/AP1509-50SG-13.kicad_sym")(options "")(descr ""))
-  (lib (name "LDO")(type "KiCad")(uri "${KIPRJMOD}/Footprints/LDO.kicad_sym")(options "")(descr ""))
-)

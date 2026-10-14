@@ -1,9 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP AP1509-50SG-13
-D DiodesZetex, AP1509-50SG-13 DC-DC Converter 2A 8-Pin, SOP
-K
-F https://www.diodes.com//assets/Datasheets/AP1509.pdf
-$ENDCMP
-#
-#End Doc Library
