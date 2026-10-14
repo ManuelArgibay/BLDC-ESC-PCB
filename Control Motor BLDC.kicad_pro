@@ -60,6 +60,26 @@
       ],
       "drc_exclusions": [
         [
+          "duplicate_footprints|82550000|135255000|3cacadfa-dbf0-4aa2-8363-19ef33ac0fad|2242052c-d46f-4a77-9f14-5523cd8d98cc",
+          ""
+        ],
+        [
+          "extra_footprint|114000000|51600000|9ae2e5ee-548f-4b8a-8670-d115f4fc5cfc|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "extra_footprint|145415000|135255000|2242052c-d46f-4a77-9f14-5523cd8d98cc|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "extra_footprint|82000000|63900000|15725335-882d-4096-9bed-536b8c80f5c8|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "extra_footprint|82550000|135255000|3cacadfa-dbf0-4aa2-8363-19ef33ac0fad|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
           "lib_footprint_mismatch|116103400|135585200|5b2317b7-5413-4aaa-bb2e-50b36ebbc544|00000000-0000-0000-0000-000000000000",
           ""
         ],
@@ -172,7 +192,7 @@
           "td_onpthpad": true,
           "td_onroundshapesonly": false,
           "td_onsmdpad": true,
-          "td_ontrackend": false,
+          "td_ontrackend": true,
           "td_onvia": true
         }
       ],
