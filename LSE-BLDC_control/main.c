@@ -1,6 +1,12 @@
 
 #include <stdint.h>
 
+//System definitions
+#define SYSCTL_RCGCGPIO 0x400FE608 //permite activar /desactivar los modulos GPIO del Run mode
+#define SYSCTL_PRGPIO 0x400FEA08 //indica cuando los modulos estaran listos para ser accedidos por el SW
+#define SYSCTL_RCC 0x400FE060    //este registro controla el clock cuando estamos en run mode
+#define SYSCTL_RCGCPWM 0x400FE640 //registro para activar el clock control para los puertos que tendran PWM
+#define SYSCLK_PRPWM 0x400FA40  //este registro indica cuando los puertos estaran listos para ser configurados como PWM
 //Port B
 #define GPIOB_DIR 0x40005400   //dirección pines (Puerto B)
 #define GPIOB_DATA 0x40005000  //registro de datos (Puerto B)
@@ -36,16 +42,45 @@
 // definimos los pines que mas usaremos
 #define PB5 0x20 //High Phase A
 #define PB7 0x80 //High Phase C
-#define PE4 0x10 //High Phase B
+#define PE4 0x10 //High Phase B	
 #define PD0 0x01 //Low Phase A
 #define PF2 0x04 //Low Phase C
 #define PB3 0x10 //Low Phase B
 
+void init_sys(void)
+{
 
+	//Activamos el Run Mode para los puertos B, E, D, F(los que tendran el PWM que commutara)
+	SYSCTL_RCGCGPIO |= 0x2B;
+
+	//Para poder proseguir, hay que asegurarnos que los puertos estan armados (Ready)
+	while ((SYSCLK_PRGPIO & 0x2B) != 0x2B);
+
+	//Activamos el PWM para los puertos B y E
+	SYSCTL_RCGCPWM |= 0x12;
+
+	//Para poder proseguir, hay que asegurarnos que los puertos estan armados (Ready)
+	while ((SYSCLK_PRPWM & 0x12) != 0x12);
+
+
+}
 
 void init_GPIOs(void)
 {
+	//Desactivamos las funciones alternativas, ya que queremos trabajar con PWM
 
+	GPIOB_AFSEL &= ~(PB5 | PB7 | PB3);  //Desactivamos f.alternativa (PB5, PB7 y PB3)
+	GPIOD_AFSEL &= ~(PD4);  //Desactivamos f.alternativa PD4
+	GPIOE_AFSEL &= ~(PE4);  //Desactivamos f.alternativa PE4
+	GPIOF_AFSEL &= ~(PF2);  //Desactivamos f.alternativa PF2
+
+	//Desactivamos las funciones analogicas, ya que queremos trabajar con PWM
+
+	GPIOB_AMSEL &= ~(PB5 | PB7 | PB3);  //Desactivamos f.analogica (PB5, PB7 y PB3)
+	GPIOD_AMSEL &= ~(PD4);  //Desactivamos f.analogica PD4
+	GPIOE_AMSEL &= ~(PE4);  //Desactivamos f.analogica PE4
+	GPIOF_AMSEL &= ~(PF2);  //Desactivamos f.analogica PF2
+	
 	//En el Port Control (PCTL), hay que seleccionar la función GPIO. Lo hacemos
 	//para los pines PB5, PB7, PE4, PD0, PF2 y PE4 que son las entradas High y Low del driver
 
@@ -68,13 +103,21 @@ void init_GPIOs(void)
 	GPIOE_DATA &= ~(PE4);  			   //Estado inicial: nivel bajo (PE4)
 	GPIOF_DATA &= ~(PF2);             //Estado inicial: nivel bajo (PF2)
 
+	//Definimos los pines como salida
 
-	
+	GPIOB_DIR |= (PB5 | PB7 | PB3);  //Definidos como salida (PB5, PB7 y PB3)
+	GPIOD_DIR |= (PD4);              //Definido como salida (PD4)
+	GPIOE_DIR |= (PE4);  			   //Definido como salida (PE4)
+	GPIOF_DIR |= (PF2);             //Definido como salida (PF2)
 }
 /**
  * main.c
  */
 int main(void)
 {
+	init_sys();
+	init_GPIOs();
+
+	
 	return 0;
 }
