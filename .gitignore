@@ -12,9 +12,3 @@ gerbers/
 *.drl
 # macOS
 .DS_Store
-
-# Code Composer Studio: salidas de compilación y cachés
-Debug/
-Release/
-.clangd/
-.metadata/

@@ -51,7 +51,6 @@ Control Motor BLDC.kicad_sch   Hoja raíz del esquema
 Control Motor BLDC.kicad_pcb   Layout
 *.kicad_sch                    Subhojas (Drivers, Comparadores, IO, Motor, TM4C123GXL, Testpoints)
 Footprints/                    Símbolos y footprints propios (NMOS DPAK, AP1509, LDO)
-LSE-BLDC_control/              Firmware para la Tiva (Code Composer Studio, C bare-metal)
 docs/                          Imágenes del README
 ```
 
